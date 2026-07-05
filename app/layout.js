@@ -4,10 +4,10 @@ import "./globals.css";
 const abril = Abril_Fatface({ variable: "--font-abril", subsets: ["latin"], weight: "400" });
 const lora = Lora({ variable: "--font-lora", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"Organization","name":"CitaRasa Digital","description":"Solusi digital bisnis kuliner","url":"https://landing-citarasa.vercel.app"};
+const __jsonld = {"@context":"https://schema.org","@type":"Organization","name":"CitaRasa Digital","description":"Solusi digital bisnis kuliner","url":"https://citarasa.pintuweb.com"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-citarasa.vercel.app"),
+  metadataBase: new URL("https://citarasa.pintuweb.com"),
   title: "CitaRasa Digital — Solusi Digital Bisnis Kuliner",
   description: "CitaRasa Digital: transformasikan bisnis kuliner Anda dengan solusi digital inovatif bergaya retro yang menggugah selera.",
   applicationName: "CitaRasa Digital",
@@ -15,11 +15,11 @@ export const metadata = {
   authors: [{ name: "CitaRasa Digital" }],
   creator: "CitaRasa Digital",
   publisher: "CitaRasa Digital",
-  alternates: { canonical: "https://landing-citarasa.vercel.app" },
+  alternates: { canonical: "https://citarasa.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-citarasa.vercel.app",
+    url: "https://citarasa.pintuweb.com",
     siteName: "CitaRasa Digital",
     title: "CitaRasa Digital — Solusi Digital Bisnis Kuliner",
     description: "CitaRasa Digital: transformasikan bisnis kuliner Anda dengan solusi digital inovatif bergaya retro yang menggugah selera.",
