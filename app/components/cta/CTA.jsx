@@ -91,7 +91,7 @@ export default function CTA() {
           className="flex flex-col sm:flex-row justify-center gap-6"
         >
           <motion.a
-            href="/contact"
+            href="#leadform"
             whileHover={{ 
               y: -2,
               boxShadow: "0 4px 20px rgba(120, 53, 15, 0.3)"
@@ -103,7 +103,7 @@ export default function CTA() {
           </motion.a>
           
           <motion.a
-            href="/demo"
+            href="#leadform"
             whileHover={{ 
               y: -2,
               boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)"
