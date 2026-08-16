@@ -58,9 +58,9 @@ const staggerContainer = {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-24 px-6 bg-amber-50 overflow-hidden">
+    <section id="testimonials" className="relative py-24 px-6 bg-enamel/12 overflow-hidden">
       {/* Vintage paper texture overlay */}
-      <div className="absolute inset-0 bg-[url('/images/vintage-paper-texture.jpg')] bg-cover opacity-20 mix-blend-overlay"></div>
+      <div className="absolute inset-0 paper-texture opacity-20 mix-blend-overlay"></div>
       
       {/* Coffee stain decals */}
       <div className="absolute top-20 left-20 w-40 h-40 opacity-10">
@@ -93,13 +93,13 @@ export default function Testimonials() {
         >
           <motion.h2 
             variants={fadeIn}
-            className="text-3xl md:text-4xl font-serif font-bold mb-4 text-amber-900"
+            className="text-3xl md:text-4xl font-serif font-bold mb-4 text-enamel"
           >
             Kata Mereka Tentang Kami
           </motion.h2>
           <motion.p 
             variants={fadeIn}
-            className="text-lg font-serif text-amber-800 max-w-2xl mx-auto"
+            className="text-lg font-serif text-enamel max-w-2xl mx-auto"
           >
             Testimoni dari pelanggan setia yang merasakan keistimewaan pelayanan kami
           </motion.p>
@@ -111,11 +111,11 @@ export default function Testimonials() {
               key={testimonial.id}
               variants={fadeIn}
               whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-lg shadow-retro border-2 border-amber-900 hover:shadow-retro-hover transition-all"
+              className="bg-cream p-8 rounded-lg shadow-retro border-2 border-enamel/30 hover:shadow-retro-hover transition-all"
             >
               {/* Polaroid-style testimonial card */}
               <div className="flex items-start space-x-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-amber-900 shadow-md">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-enamel/30 shadow-md">
                   <Image
                     src={testimonial.photo}
                     alt={testimonial.name}
@@ -124,15 +124,15 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-serif font-semibold text-amber-900">{testimonial.name}</h4>
-                  <p className="text-sm font-serif text-amber-700">{testimonial.job}</p>
-                  <p className="text-xs font-serif text-amber-600 font-medium mt-1">{testimonial.company}</p>
+                  <h4 className="font-serif font-semibold text-enamel">{testimonial.name}</h4>
+                  <p className="text-sm font-serif text-enamel">{testimonial.job}</p>
+                  <p className="text-xs font-serif text-enamel font-medium mt-1">{testimonial.company}</p>
                 </div>
               </div>
               
-              <p className="text-amber-900 mb-6 italic relative pl-6 font-serif">
+              <p className="text-enamel mb-6 italic relative pl-6 font-serif">
                 <svg 
-                  className="absolute left-0 top-0 w-5 h-5 text-amber-300" 
+                  className="absolute left-0 top-0 w-5 h-5 text-enamel" 
                   fill="currentColor" 
                   viewBox="0 0 20 20"
                 >
@@ -141,12 +141,12 @@ export default function Testimonials() {
                 {testimonial.text}
               </p>
               
-              <div className="flex items-center justify-between border-t border-amber-200 pt-4">
+              <div className="flex items-center justify-between border-t border-enamel/30 pt-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className={`w-5 h-5 ${i < testimonial.rating ? 'text-amber-400' : 'text-amber-200'}`}
+                      className={`w-5 h-5 ${i < testimonial.rating ? 'text-enamel' : 'text-enamel'}`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -155,7 +155,7 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <svg 
-                  className="w-6 h-6 text-amber-300" 
+                  className="w-6 h-6 text-enamel" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -171,7 +171,7 @@ export default function Testimonials() {
           variants={fadeIn}
           className="mt-16 text-center"
         >
-          <button className="inline-flex items-center px-6 py-3 border-2 border-amber-900 shadow-retro-btn font-serif text-amber-900 rounded-lg bg-white hover:bg-amber-50 focus:outline-none transition-all">
+          <button className="inline-flex items-center px-6 py-3 border-2 border-enamel/30 shadow-retro-btn font-serif text-enamel rounded-lg bg-cream hover:bg-enamel/12 focus:outline-none transition-all">
             Lihat Lebih Banyak Testimoni
             <svg className="ml-3 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

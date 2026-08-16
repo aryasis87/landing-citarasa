@@ -8,10 +8,10 @@ export default function FeatureCard({ title, description }) {
     <motion.div
       variants={fadeIn}
       whileHover="hover"
-      className="p-8 shadow-md rounded-lg bg-white border border-gray-200"
+      className="p-8 shadow-md rounded-lg bg-cream border border-soot/12"
     >
-      <h3 className="text-2xl font-bold text-indigo-600 mb-4">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-2xl font-bold text-enamel mb-4">{title}</h3>
+      <p className="text-soot-soft">{description}</p>
     </motion.div>
   );
 }

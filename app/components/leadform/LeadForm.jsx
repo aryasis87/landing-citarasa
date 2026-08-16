@@ -71,10 +71,10 @@ export default function LeadForm() {
   return (
     <section 
       id="leadform" 
-      className="relative py-24 px-6 overflow-hidden bg-amber-50"
+      className="relative py-24 px-6 overflow-hidden bg-enamel/12"
     >
       {/* Vintage paper texture overlay */}
-      <div className="absolute inset-0 bg-[url('/images/vintage-paper-texture.jpg')] bg-cover opacity-30 mix-blend-overlay"></div>
+      <div className="absolute inset-0 paper-texture opacity-30 mix-blend-overlay"></div>
       
       {/* Retro coffee stains - Now using Next.js Image component properly */}
       <div className="absolute top-20 right-20 w-40 h-40 opacity-10">
@@ -108,13 +108,13 @@ export default function LeadForm() {
         >
           <motion.h2 
             variants={fadeIn}
-            className="text-3xl md:text-4xl font-serif font-bold mb-4 text-amber-900"
+            className="text-3xl md:text-4xl font-serif font-bold mb-4 text-enamel"
           >
             Mari Ciptakan Hidangan Istimewa
           </motion.h2>
           <motion.p 
             variants={fadeIn}
-            className="text-lg font-serif text-amber-800 max-w-2xl mx-auto"
+            className="text-lg font-serif text-enamel max-w-2xl mx-auto"
           >
             Bergabunglah dengan jaringan mitra kuliner premium kami dan dapatkan resep rahasia langsung ke email Anda.
           </motion.p>
@@ -122,14 +122,14 @@ export default function LeadForm() {
 
         <motion.form 
           onSubmit={handleSubmit} 
-          className="max-w-md mx-auto relative bg-white p-8 shadow-retro border-2 border-amber-900"
+          className="max-w-md mx-auto relative bg-cream p-8 shadow-retro border-2 border-enamel/30"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
         >
           {/* Form fields */}
           <motion.div variants={fadeIn} className="mb-6">
-            <label htmlFor="name" className="block text-sm font-serif font-medium text-amber-900 mb-2">
+            <label htmlFor="name" className="block text-sm font-serif font-medium text-enamel mb-2">
               Nama Lengkap
             </label>
             <input
@@ -141,17 +141,17 @@ export default function LeadForm() {
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded border-2 font-serif focus:outline-none transition-all ${
                 errors.name 
-                  ? "border-red-400 focus:ring-0" 
-                  : "border-amber-300 focus:border-amber-500 focus:ring-0"
+                  ? "border-enamel/30 focus:ring-0" 
+                  : "border-enamel/30 focus:border-enamel/30 focus:ring-0"
               }`}
             />
             {errors.name && (
-              <p className="mt-2 text-sm font-serif text-red-600">{errors.name}</p>
+              <p className="mt-2 text-sm font-serif text-enamel">{errors.name}</p>
             )}
           </motion.div>
 
           <motion.div variants={fadeIn} className="mb-6">
-            <label htmlFor="email" className="block text-sm font-serif font-medium text-amber-900 mb-2">
+            <label htmlFor="email" className="block text-sm font-serif font-medium text-enamel mb-2">
               Email Kerja
             </label>
             <input
@@ -163,17 +163,17 @@ export default function LeadForm() {
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded border-2 font-serif focus:outline-none transition-all ${
                 errors.email 
-                  ? "border-red-400 focus:ring-0" 
-                  : "border-amber-300 focus:border-amber-500 focus:ring-0"
+                  ? "border-enamel/30 focus:ring-0" 
+                  : "border-enamel/30 focus:border-enamel/30 focus:ring-0"
               }`}
             />
             {errors.email && (
-              <p className="mt-2 text-sm font-serif text-red-600">{errors.email}</p>
+              <p className="mt-2 text-sm font-serif text-enamel">{errors.email}</p>
             )}
           </motion.div>
 
           <motion.div variants={fadeIn} className="mb-8">
-            <label htmlFor="company" className="block text-sm font-serif font-medium text-amber-900 mb-2">
+            <label htmlFor="company" className="block text-sm font-serif font-medium text-enamel mb-2">
               Restoran/Perusahaan
             </label>
             <input
@@ -185,12 +185,12 @@ export default function LeadForm() {
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded border-2 font-serif focus:outline-none transition-all ${
                 errors.company 
-                  ? "border-red-400 focus:ring-0" 
-                  : "border-amber-300 focus:border-amber-500 focus:ring-0"
+                  ? "border-enamel/30 focus:ring-0" 
+                  : "border-enamel/30 focus:border-enamel/30 focus:ring-0"
               }`}
             />
             {errors.company && (
-              <p className="mt-2 text-sm font-serif text-red-600">{errors.company}</p>
+              <p className="mt-2 text-sm font-serif text-enamel">{errors.company}</p>
             )}
           </motion.div>
 
@@ -198,11 +198,11 @@ export default function LeadForm() {
             variants={fadeIn}
             type="submit"
             disabled={loading}
-            className="w-full bg-amber-900 text-amber-50 py-4 rounded-lg font-serif font-medium hover:bg-amber-800 transition-all flex justify-center items-center gap-2 border-2 border-amber-900 shadow-retro-btn"
+            className="w-full bg-enamel text-cream py-4 rounded-lg font-serif font-medium hover:bg-enamel transition-all flex justify-center items-center gap-2 border-2 border-enamel/30 shadow-retro-btn"
           >
             {loading ? (
               <>
-                <svg className="animate-spin h-5 w-5 text-amber-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin h-5 w-5 text-enamel" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
@@ -218,7 +218,7 @@ export default function LeadForm() {
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-8 text-center font-serif text-amber-900"
+            className="mt-8 text-center font-serif text-enamel"
           >
             {message}
           </motion.p>
@@ -226,7 +226,7 @@ export default function LeadForm() {
 
         <motion.p 
           variants={fadeIn}
-          className="mt-12 text-center text-sm font-serif text-amber-800"
+          className="mt-12 text-center text-sm font-serif text-enamel"
         >
           Kami menghargai privasi Anda. Anda dapat berhenti berlangganan kapan saja.
         </motion.p>

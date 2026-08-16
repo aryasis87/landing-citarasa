@@ -53,9 +53,9 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden bg-amber-50">
+    <section className="relative h-screen overflow-hidden bg-enamel/12">
       {/* Vintage paper texture overlay */}
-      <div className="absolute inset-0 bg-[url('/images/vintage-paper-texture.jpg')] bg-cover opacity-20 mix-blend-multiply"></div>
+      <div className="absolute inset-0 paper-texture opacity-20 mix-blend-multiply"></div>
       
       {/* Retro diagonal stripes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -68,7 +68,7 @@ export default function Hero() {
         variants={vintageFloat}
         animate="float"
       >
-        <div className="bg-white p-2 shadow-lg rotate-6">
+        <div className="bg-cream p-2 shadow-lg rotate-6">
           <Image 
             src="/images/cf1.jpg" 
             alt="Vintage coffee cup"
@@ -76,7 +76,7 @@ export default function Hero() {
             height={200}
             className="object-cover w-full h-48"
           />
-          <div className="p-2 font-handwriting text-sm text-gray-700">Our Special Brew</div>
+          <div className="p-2 font-handwriting text-sm text-soot">Our Special Brew</div>
         </div>
       </motion.div>
 
@@ -86,7 +86,7 @@ export default function Hero() {
         animate="float"
         transition={{ delay: 0.5 }}
       >
-        <div className="bg-white p-2 shadow-lg -rotate-3">
+        <div className="bg-cream p-2 shadow-lg -rotate-3">
           <Image 
             src="/images/fs1.jpg" 
             alt="Vintage fashion"
@@ -94,7 +94,7 @@ export default function Hero() {
             height={200}
             className="object-cover w-full h-58"
           />
-          <div className="p-2 font-handwriting text-sm text-gray-700">Spring Collection</div>
+          <div className="p-2 font-handwriting text-sm text-soot">Spring Collection</div>
         </div>
       </motion.div>
 
@@ -116,23 +116,21 @@ export default function Hero() {
         variants={staggerContainer}
       >
         <motion.div variants={retroVariants} className="mb-8">
-          <span className="inline-block px-4 py-2 bg-amber-900 text-amber-50 text-sm font-serif tracking-widest">
+          <span className="inline-block px-4 py-2 bg-enamel text-cream text-sm font-serif tracking-widest">
             SINCE 1985
           </span>
         </motion.div>
 
         <motion.h1 
           variants={retroVariants}
-          className="text-5xl md:text-7xl font-serif font-bold mb-6 text-amber-900"
+          className="text-5xl md:text-7xl font-serif font-bold mb-6 text-enamel"
         >
           <span className="block">CitaRasa</span>
           <span className="block">Digital</span>
         </motion.h1>
 
-        <motion.p 
-          variants={retroVariants}
-          className="text-lg md:text-xl font-serif text-amber-800 max-w-2xl mb-12"
-        >
+        {/* Tanpa variants: paragraf pembuka harus terbaca walau animasinya gagal. */}
+        <motion.p className="mb-12 max-w-2xl font-serif text-lg text-enamel md:text-xl">
           Transformasikan bisnis kuliner Anda dengan solusi digital inovatif untuk meningkatkan daya tarik dan penjualan secara online.
         </motion.p>
 
@@ -144,7 +142,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleExploreMenu}
-            className="px-8 py-3 bg-amber-900 text-amber-50 font-serif text-lg border-2 border-amber-900 shadow-retro hover:bg-amber-800 transition-all"
+            className="px-8 py-3 bg-enamel text-cream font-serif text-lg border-2 border-enamel/30 shadow-retro hover:bg-enamel transition-all"
           >
             Explore Menu
           </motion.button>
@@ -153,7 +151,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleVisitShop}
-            className="px-8 py-3 bg-amber-50 text-amber-900 font-serif text-lg border-2 border-amber-900 shadow-retro hover:bg-amber-100 transition-all"
+            className="px-8 py-3 bg-enamel/12 text-enamel font-serif text-lg border-2 border-enamel/30 shadow-retro hover:bg-enamel/12 transition-all"
           >
             Visit Our Shop
           </motion.button>
@@ -165,7 +163,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 10 }}
         transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-900"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-enamel"
       >
         <svg
           className="w-6 h-6 animate-bounce"

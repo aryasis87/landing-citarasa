@@ -28,9 +28,9 @@ export default function CTA() {
   };
 
   return (
-    <section className="relative py-28 px-6 overflow-hidden bg-amber-50">
+    <section className="relative py-28 px-6 overflow-hidden bg-enamel/12">
       {/* Vintage paper texture overlay */}
-      <div className="absolute inset-0 bg-[url('/images/vintage-paper-texture.jpg')] bg-cover opacity-30 mix-blend-overlay"></div>
+      <div className="absolute inset-0 paper-texture opacity-30 mix-blend-overlay"></div>
       
       {/* Coffee stain decals */}
       <div className="absolute top-20 left-1/4 w-40 h-40 opacity-10">
@@ -66,14 +66,14 @@ export default function CTA() {
         className="max-w-4xl mx-auto relative z-10 text-center"
       >
         <motion.div variants={fadeIn} className="mb-8">
-          <span className="inline-block px-4 py-2 bg-amber-900 text-amber-50 text-sm font-serif tracking-widest">
+          <span className="inline-block px-4 py-2 bg-enamel text-cream text-sm font-serif tracking-widest">
             SEJAK 1985
           </span>
         </motion.div>
 
         <motion.h2 
           variants={fadeIn}
-          className="text-4xl md:text-5xl font-serif font-bold mb-6 text-amber-900"
+          className="text-4xl md:text-5xl font-serif font-bold mb-6 text-enamel"
         >
           <span className="block">Siap Membawa</span>
           <span className="block">Kuliner Anda ke Level Berikutnya?</span>
@@ -81,7 +81,7 @@ export default function CTA() {
         
         <motion.p 
           variants={fadeIn}
-          className="text-lg md:text-xl font-serif text-amber-800 max-w-2xl mx-auto mb-12"
+          className="text-lg md:text-xl font-serif text-enamel max-w-2xl mx-auto mb-12"
         >
           Temui ahli kuliner kami dan temukan bagaimana kami dapat membantu mewujudkan cita rasa impian Anda.
         </motion.p>
@@ -97,7 +97,7 @@ export default function CTA() {
               boxShadow: "0 4px 20px rgba(120, 53, 15, 0.3)"
             }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-amber-900 text-amber-50 font-serif text-lg border-2 border-amber-900 shadow-retro hover:bg-amber-800 transition-all"
+            className="px-8 py-4 bg-enamel text-cream font-serif text-lg border-2 border-enamel/30 shadow-retro hover:bg-enamel transition-all"
           >
             Mulai Sekarang
           </motion.a>
@@ -109,7 +109,7 @@ export default function CTA() {
               boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)"
             }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-transparent text-amber-900 font-serif text-lg border-2 border-amber-900 shadow-retro hover:bg-amber-100 transition-all"
+            className="px-8 py-4 bg-transparent text-enamel font-serif text-lg border-2 border-enamel/30 shadow-retro hover:bg-enamel/12 transition-all"
           >
             Minta Demo
           </motion.a>
@@ -117,7 +117,7 @@ export default function CTA() {
         
         <motion.p 
           variants={fadeIn}
-          className="mt-12 text-sm font-serif text-amber-800"
+          className="mt-12 text-sm font-serif text-enamel"
         >
           Dipercaya oleh 500+ bisnis kuliner di seluruh dunia
         </motion.p>

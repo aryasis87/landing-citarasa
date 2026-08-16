@@ -1,4 +1,5 @@
 import { Abril_Fatface, Lora } from "next/font/google";
+import MotionProvider from "./components/MotionProvider";
 import "./globals.css";
 
 const abril = Abril_Fatface({ variable: "--font-abril", subsets: ["latin"], weight: "400" });
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <body className={`${abril.variable} ${lora.variable} antialiased`}>
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
         </body>
     </html>
