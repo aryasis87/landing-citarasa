@@ -38,7 +38,7 @@ export default function LeadForm() {
     setLoading(true);
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      setMessage("Terima kasih! Kami akan segera menghubungi Anda untuk berbagi rahasia dapur.");
+      setMessage("Terima kasih! Ini halaman contoh, jadi data Anda tidak dikirim ke mana pun.");
       setFormData({ name: "", email: "", company: "" });
     } catch (error) {
       setMessage("Terjadi kesalahan. Silakan coba lagi.");
