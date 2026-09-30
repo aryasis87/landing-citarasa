@@ -1,0 +1,33 @@
+import Link from 'next/link';
+import { KASUS } from '@/lib/citarasa';
+
+export default function KasusTeaser() {
+  return (
+    <section className="bg-soot px-6 py-20 text-cream md:py-28">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p className="sign-label mb-4 text-mustard">Studi kasus</p>
+            <h2 className="text-[2rem] leading-[1.1] text-cream md:text-[2.8rem]">Tiga warung, tiga masalah yang berbeda</h2>
+          </div>
+          <Link href="/studi-kasus" className="sign-label shrink-0 border-b-2 border-mustard pb-1 text-mustard hover:text-cream">
+            Baca semuanya
+          </Link>
+        </div>
+        <ul className="grid gap-6 md:grid-cols-3">
+          {KASUS.map((k) => (
+            <li key={k.slug}>
+              <Link href={`/studi-kasus/${k.slug}`} className="plate plate-mustard block h-full px-7 py-9 transition-transform hover:-translate-y-1">
+                <span className="sign-label">Sejak {k.sejak} · {k.kota}</span>
+                <h3 className="mt-3 text-2xl leading-tight">{k.nama}</h3>
+                <p className="mt-4 leading-relaxed">{k.ringkas}</p>
+                <span className="sign-label mt-6 inline-block border-b-2 border-soot pb-0.5">Baca kasusnya</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="sign-label mt-8 text-cream/70">Nama warung dan angka dalam studi kasus adalah contoh untuk purwarupa desain.</p>
+      </div>
+    </section>
+  );
+}
