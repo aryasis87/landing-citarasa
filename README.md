@@ -1,6 +1,6 @@
-# CitaRasa Digital — Solusi Digital Bisnis Kuliner
+# CitaRasa Digital — Rumah Makan Lama, Pesanan dari Ponsel
 
-CitaRasa Digital: transformasikan bisnis kuliner Anda dengan solusi digital inovatif bergaya retro yang menggugah selera.
+CitaRasa Digital memindahkan warung dan rumah makan legendaris ke ponsel pelanggan: menu digital, foto menu, profil peta, dan pesanan WhatsApp. Minta audit menu gratis.
 
 **Demo live:** https://landing-citarasa.vercel.app
 
@@ -14,14 +14,15 @@ Bahasa rupa **Papan Nama Enamel** rumah makan lama: warna pekat, huruf gemuk, da
 
 ## Halaman
 
-`/`
+- `/` — jasa digitalisasi rumah makan legendaris: menu digital, foto menu, profil peta, pesanan WhatsApp
+- `/studi-kasus` — tiga studi kasus warung fiktif
+- `/studi-kasus/[slug]` — sebelum–sesudah dan angka tiap studi kasus
 
 ## Teknologi
 
 - Next.js 15.5 (App Router) dan React 19
 - Tailwind CSS v4
 - JavaScript
-- Heroicons, Framer Motion
 - Font: Abril Fatface, Lora (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 
